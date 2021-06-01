@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head class="container-fluid">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <meta content="width=devide-width, initial-scale=1" name="viewport"/>
+    <style>
+    .navbar  {
+        padding-top: 4px;
+        padding-bottom: 0px;
+
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'Balsamiq Sans', cursive;
+        letter-spacing: 3px;
+        color: purple;
+        width:100vw;
+
+
+    }
+
+    .navbar-nav  li a:hover {
+        color: #FF0000 !important;
+    }
+    .heading{
+      font-family: 'Balsamiq Sans', cursive;
+    }
+    .g{
+       background-image: url("./images/ffg-min.png");
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center center;
+       background-attachment: fixed;
+
+
+
+    }
+    .p{
+      width:auto;
+      height:inherit;
+      background-color:red;
+      color: white;
+      border-color: #4019FF;
+      border-radius: 4px;
+      float:right;
+
+
+      margin-right:3%;
+      font-family:'Balsamiq Sans', cursive;
+      font-size: 10px;
+
+    }
+    .p:hover {
+      background-color:blue;
+
+    }
+    .s{
+      color:yellow;
+      padding-right: 3vw;
+
+    }
+    .i{
+       border: 1px solid black;
+       width:80%;
+       border-radius: 8px;
+       float:left;
+
+    }
+    .foo{
+      font-weight: bold;
+      font-family:'Balsamiq Sans', cursive;
+      letter-spacing: 3px;
+    }
+    .h{
+      padding-left:10vw;
+    }
+    .form-container{
+      background: #fff;
+
+      border-radius: 6px;
+      box-shadow: 0px 0px 1px 0px;
+      width:35vw;
+      height:57vh;
+      margin-left: 46vw;
+      margin-top: 1vh;
+
+    }
+    .top{
+      padding-top: 3vh;
+    }
+    .hea{
+      margin-left: 5%;
+      font-style: oblique;
+      font-family: 'Balsamiq Sans', cursive;
+    }
+    .midp{
+      float:right;
+      margin-right: 10vw;
+      font-weight: bold;
+      letter-spacing: 3px;
+      font-family: 'Balsamiq Sans', cursive;
+    }
+    @media only screen and (max-device-width: 866px){
+      .form-container{
+        background:#06CFD2    ;
+
+        border-radius: 6px;
+        box-shadow: 0px 0px 3px 0px;
+        width:60vw;
+        height:auto;
+        margin-left:20vw;
+        margin-top:.5vh;
+        padding-bottom:12vh;
+
+
+      }
+      .g{
+        background-image: url("./images/hjhj.gif");
+      }
+      .midp{
+        color: white;
+      }
+     .hea{
+       color:black;
+     }
+
+    }
+
+
+    </style>
+
+
+    <nav style="background-color:white"class="navbar navbar-default navbar-dark">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <p class="h navbar-brand">All In One Downloader</p>
+        </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="s"><a href="/">HOME</a></li>
+            <li class="s"><a href="https://www.youtube.com">Youtube</a></li>
+            <li class="s"><a href="https://www.facebook.com">Facebook</a></li>
+
+          </ul>
+      </div>
+    </nav>
+
+</head>
+<br>
+<br>
+<body class="g">
+  <h5 class="midp">Download Videos From Youtube And Facebook For Free</h5>
+  <br>
+    <br>
+
+  <div class="form-container">
+    <div class="top">
+
+  <form class= "" action="/downloadmp4" method="post">
+    <div class="form-group">
+
+      <p class="hea" style="font-weight: bold">Paste The Youtube Url Below...</p>
+
+    <input class="form-control you i" placeholder="" type="text" name="urly">
+    <button class="btn-lg p yt" type="submit" name="butt">Download</button>
+      </div>
+  </form>
+<br>
+  <br>
+  <br>
+  <form class= "frm" action="/down" method="post" name="myform">
+    <div class="form-group">
+
+      <p class="hea" style="font-weight: bold">Paste The Facebook Url Below...(Low Quality)</p>
+
+    <input class="form-control fac i" placeholder="" type="text" name="url">
+
+
+
+      <button class="btn-lg p fb" type="submit" name="but">Low Q</button>
+  </div>
+  </form>
+  <br>
+  <br>
+  <br>
+  <form class= "frm" action="/downhi" method="post" name="myform">
+    <div class="form-group">
+
+      <p class="hea" style="font-weight: bold">Paste The Facebook Url Below...(High Quality)</p>
+
+    <input class="form-control fbhig i" placeholder="" type="text" name="urlhi">
+
+
+
+      <button class="btn-lg p fbhi" type="submit" name="but">High Q</button>
+  </div>
+  </form>
+  <br>
+  <br>
+  <br>
+  <form class= "frm" action="/downins" method="post" name="myform">
+    <div class="form-group">
+
+      <p class="hea" style="font-weight: bold">Paste The Insta Url Below...</p>
+
+    <input class="form-control fbhig i" placeholder="" type="text" name="urlins">
+
+
+
+      <button class="btn-lg p fbhi" type="submit" name="but">Download</button>
+  </div>
+  </form>
+</div>
+</div>
+    <script>
+    var fb = document.querySelector('.fb');
+     var convert = document.querySelector('.yt');
+       var fbhi = document.querySelector('.fbhi');
+         var insta = document.querySelector('.insta');
+           var instaimg = document.querySelector('.instaimg');
+
+    //let select = document.querySelector('.opt');
+    var fac = document.querySelector('.fac');
+     var URLinput = document.querySelector('.you');
+  var fbhig = document.querySelector('.fbhig');
+    var ins = document.querySelector('.ins');
+      var insimg = document.querySelector('.insimg');
+     //fbh.addEventListener('click',function()){
+    //   document.myform.action="/downn";
+
+    // }
+    //function fbh(){
+    //  document.myform.action="/downn";
+    //}
+
+
+     fb.addEventListener('click',function(e){
+       if (!fac.value) {
+        //alert('Please Enter URL');
+        //document.location.replace("https://i.pinimg.com/originals/53/40/90/5340903ab0ea6c0785b8a17d850b5a76.png");
+        e.preventDefault();
+        location.reload(true);
+
+        }
+        //else{
+        //  window.location.href =  "http://localhost:3000";
+
+      //  }
+      //https://i.ibb.co/cb3Vj3C/Web-1920-2-2x.png
+
+     });
+    convert.addEventListener('click', function(e){
+      if (!URLinput.value) {
+
+        // alert('Please Enter URL');
+        e.preventDefault();
+        location.reload(true);
+
+  //location.reload(true);
+       }
+       //else {
+         //if (select.value == 'mp3') {
+        //   sendMp3(URLinput.value);
+        // } else if (select.value == 'mp4') {
+        //   sendMp4(URLinput.value);
+         //}
+       //}
+        //console.log(`URL: ${URLinput.value}`);
+        //sendURL(URLinput.value);
+    });
+    //function sendURL(URL) {
+    //    window.location.href = `http://localhost:3000/download?oops=${URL}`;
+    //}
+    //function sendMp3(URL) {
+    //  window.location.href =  `http://localhost:3000/downloadmp3?oops=${URL}`;
+
+  //  }
+
+  //  function sendMp4(URL) {
+    //	window.location.href =  `http://localhost:3000/downloadmp4?oops=${URL}`;
+    //}
+    //https://mcdn.wallpapersafari.com/medium/35/87/742tRg.jpg
+    //https://i.ibb.co/cb3Vj3C/Web-1920-2-2x.png
+         //background-image: url("./images/ffg.jpg");
+    fbhi.addEventListener('click', function(e){
+      if (!fbhig.value) {
+
+        // alert('Please Enter URL');
+        e.preventDefault();
+        location.reload(true);
+      }
+    });
+    insta.addEventListener('click', function(e){
+      if (!ins.value) {
+
+        // alert('Please Enter URL');
+        e.preventDefault();
+        location.reload(true);
+      }
+    });
+    instaimg.addEventListener('click', function(e){
+      if (!insimg.value) {
+
+        // alert('Please Enter URL');
+        e.preventDefault();
+        location.reload(true);
+      }
+    });
+  </script>
+  <br>
+  <br>
+  <center>
+  <h4 class="foo" style="color:red">Made By Kushal Ghosh</h4>
+  <h5 class="foo" style="color:black"><a href="https://www.facebook.com/kushal.ghosh.3766/">Click Here To Contact Me</a></h5>
+  </center>
+
+</body>
+
+</html>
